@@ -11,7 +11,7 @@ export default function Header() {
 
   return (
     <div className='header item-1'>
-      <div>David <span style={{fontWeight: '300'}}>Schaarschmidt</span></div>
+      <div className='header-title'>David <span style={{fontWeight: '300'}}>Schaarschmidt</span></div>
       <button className='menu-icon'>{menuSVG}</button>
     </div>
   )
