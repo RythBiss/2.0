@@ -15,13 +15,13 @@ function App() {
         <PageIndicator />
       </div>
       <div className='main'>
-        <div className='section first'>
+        <div className='section top'>
           <p className='first-text'>
             Add some multi <span style={{color: '#3FA0FA'}}>line</span> splash text <span style={{color: '#EA57DB'}}>here</span>.
           </p>
           <img className='blue-planet' src={BluePlanet} alt='blue planet' />
         </div>
-        <div className='section second'>
+        <div className='section introduction'>
           <p className='second-text'>
             Paragraph of text describing <span style={{color: '#3FA0FA'}}>myself</span>, summarizing my <span style={{color: '#EA57DB'}}>experience</span> and skills.
           </p>

@@ -27,74 +27,7 @@ button{
   color: var(--text-color);
 }
 
-.main{
-  color: var(--text-color);
-  overflow: hidden;
-}
 
-.section{
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-}
-
-.carousel{
-  height: 100vh;
-}
-
-.section > img{
-  z-index: -1;
-}
-
-.blue-planet{
-  position: absolute;
-  right: -200px;
-  bottom: -140px;
-  width: 500px;
-}
-
-.red-planet{
-  position: absolute;
-  left: -100px;
-  bottom: -250px;
-  width: 500px;
-}
-
-.black-hole{
-  position: absolute;
-  right: -200px;
-  bottom: -480px;
-  width: 500px;
-}
-
-.bottom{
-  height: 100vh;
-}
-
-.bottom-img{
-  position: absolute;
-  top: 90%;
-  width: 100%;
-}
-
-.first{
-  justify-content: flex-start;
-}
-
-.first-text{
-  max-width: 5em;
-  font-size: 2rem;
-  margin-left: 64px;
-  margin-bottom: 128px;
-}
-
-.second-text{
-  max-width: 13em;
-  font-size: 1.25rem;
-  margin-bottom: 128px;
-}
 
 /* HEADER */
 .header{
@@ -183,12 +116,93 @@ button{
   grid-row-end: 3;
 }
 
+.main{
+  color: var(--text-color);
+  overflow: hidden;
+}
+
+.section{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.section > img{
+  z-index: -1;
+}
+
+.top{
+  height: 100vh;
+  justify-content: flex-start;
+}
+
+.introduction{
+  height: 70vh;
+  min-height: 500px;
+}
+
+.carousel{
+  height: 100vh;
+  min-height: 400px;
+}
+
+.bottom{
+  width: 100%;
+}
+
+.first-text{
+  width: 50%;
+  min-width: 5em;
+  font-size: 2rem;
+  margin-left: 64px;
+  margin-bottom: 128px;
+}
+
+.second-text{
+  max-width: 13em;
+  font-size: 1.25rem;
+}
+
+/*ART*/
+.blue-planet{
+  position: absolute;
+  /* 0.4 */
+  right: -150px;
+  /* 0.28 */
+  bottom: -100px;
+  width: 100%;
+  max-width: 450px;
+}
+
+.red-planet{
+  position: absolute;
+  left: -175px;
+  bottom: -250px;
+  width: 100%;
+  max-width: 450px;
+}
+
+.black-hole{
+  position: absolute;
+  right: -150px;
+  bottom: -250px;
+  width: 100%;
+  max-width: 450px;
+  min-width: 300px;
+}
+
+.bottom-img{
+  width: 100%;
+}
+
 /*LINK CAROUSEL*/
 .link-card{
-  width: 200px;
-  height: 200px;
   display: grid;
+  margin: 64px;
   gap: 8px;
+  background-color: #4123812a;
+  backdrop-filter: blur(10px);
 }
 
 .blue-corner{
