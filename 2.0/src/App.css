@@ -1,8 +1,8 @@
 :root {
-    --main-bg-color: #140626;
+    --bg-color: #140626;
     --accent-color-1: #3FA0FA;
     --accent-color-2: #EA57DB;
-    --accent-color-3: #412381;
+    --primary-color: #29164e;
     --text-color: #FAFAFA
   }
 
@@ -18,7 +18,7 @@ body, html{
 }
 
 body{
-  background-color: var(--main-bg-color);
+  background-color: var(--bg-color);
 }
 
 button{
@@ -26,8 +26,6 @@ button{
   border: none;
   color: var(--text-color);
 }
-
-
 
 /* HEADER */
 .header{
@@ -94,12 +92,17 @@ button{
 
 /* MAIN */
 .fixed-ui{
+  z-index: 1;
   position: fixed;
   display: grid;
   width: 100%;
   height: 100vh;
   grid-template-columns: min-content auto;
   grid-template-rows: min-content 1fr min-content 1fr;
+}
+
+img[class^='slot-']{
+  border-radius: 50%;
 }
 
 .item-1{
@@ -148,7 +151,8 @@ button{
 }
 
 .bottom{
-  width: 100%;
+  height: 75vh;
+  background-color: var(--primary-color);
 }
 
 .first-text{
@@ -156,7 +160,7 @@ button{
   min-width: 5em;
   font-size: 2rem;
   margin-left: 64px;
-  margin-bottom: 128px;
+
 }
 
 .second-text{
@@ -190,10 +194,6 @@ button{
   width: 100%;
   max-width: 450px;
   min-width: 300px;
-}
-
-.bottom-img{
-  width: 100%;
 }
 
 /*LINK CAROUSEL*/

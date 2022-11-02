@@ -31,9 +31,7 @@ function App() {
           <LinkCard />
           <img className='black-hole' src={BlackHole} alt='black hole' />
         </div>
-        <div className='section bottom'>
-          <img className='bottom-img' src={Bottom} alt='bottom' />
-        </div>
+        <div className='section bottom'/>
       </div>
     </div>
   );
