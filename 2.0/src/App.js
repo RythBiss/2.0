@@ -6,6 +6,9 @@ import BluePlanet from './Art/BluePlanet.svg'
 import RedPlanet from './Art/RedPlanet.svg'
 import BlackHole from './Art/BlackHole.svg'
 import Bottom from './Art/Bottom.svg'
+import Git from './Art/Git.png'
+import Email from './Art/Gmail.png'
+
 
 function App() {
   return (
@@ -31,7 +34,13 @@ function App() {
           <LinkCard />
           <img className='black-hole' src={BlackHole} alt='black hole' />
         </div>
-        <div className='section bottom'/>
+        <div className='section bottom'>
+          <img className='bottom-circle' src={Bottom} alt='bottom circle' />
+          <div className='icons'>
+            <img src={Git} alt='github' />
+            <img src={Email} alt='email' />
+          </div>
+        </div>
       </div>
     </div>
   );

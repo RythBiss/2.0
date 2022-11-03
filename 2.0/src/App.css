@@ -2,7 +2,7 @@
     --bg-color: #140626;
     --accent-color-1: #3FA0FA;
     --accent-color-2: #EA57DB;
-    --primary-color: #29164e;
+    --primary-color: #412381;
     --text-color: #FAFAFA
   }
 
@@ -103,6 +103,7 @@ button{
 
 img[class^='slot-']{
   border-radius: 50%;
+  z-index: 0;
 }
 
 .item-1{
@@ -143,6 +144,7 @@ img[class^='slot-']{
 .introduction{
   height: 70vh;
   min-height: 500px;
+  justify-content: flex-end;
 }
 
 .carousel{
@@ -151,21 +153,39 @@ img[class^='slot-']{
 }
 
 .bottom{
-  height: 75vh;
-  background-color: var(--primary-color);
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.bottom-circle{
+  width: 800px;
+}
+
+.icons{
+  position: absolute;
+  display: flex;
+  align-items: center;
+  height: 96%;
+}
+
+.icons > img{
+  margin: 16px;
+  width: 32px;
 }
 
 .first-text{
   width: 50%;
-  min-width: 5em;
   font-size: 2rem;
   margin-left: 64px;
-
 }
 
 .second-text{
-  max-width: 13em;
-  font-size: 1.25rem;
+  width: 50%;
+  font-size: 1.5rem;
+  margin-right: 64px;
+  text-align: end;
 }
 
 /*ART*/
@@ -175,26 +195,85 @@ img[class^='slot-']{
   right: -150px;
   /* 0.28 */
   bottom: -100px;
-  width: 100%;
-  max-width: 450px;
+  width: 50%;
+  max-width: 800px;
 }
 
 .red-planet{
   position: absolute;
-  left: -175px;
+  left: -125px;
   bottom: -250px;
-  width: 100%;
-  max-width: 450px;
+  width: 50%;
+  max-width: 800px;
 }
 
 .black-hole{
   position: absolute;
-  right: -150px;
-  bottom: -250px;
-  width: 100%;
-  max-width: 450px;
-  min-width: 300px;
+  right: -125px;
+  bottom: -150px;
+  width: 50%;
+  max-width: 800px;
 }
+
+@media (orientation: portrait) {
+  .blue-planet{
+    width: 70%;
+  }
+  
+  .red-planet{
+    width: 70%;
+  }
+  
+  .black-hole{
+    width: 70%;
+  }
+}
+
+@media (max-width: 1024px) {
+  .blue-planet{
+    width: 80%;
+    max-width: 500px;
+  }
+  
+  .red-planet{
+    width: 80%;
+    max-width: 400px;
+  }
+  
+  .black-hole{
+    width: 80%;
+    max-width: 400px;
+  }
+}
+
+@media (max-width: 768px) {
+  .blue-planet{
+    width: 60%;
+  }
+  
+  .red-planet{
+    width: 60%;
+  }
+  
+  .black-hole{
+    width: 60%;
+  }
+
+  @media (orientation: portrait) {
+    .blue-planet{
+      width: 100%;
+    }
+    
+    .red-planet{
+      width: 100%;
+    }
+    
+    .black-hole{
+      width: 100%;
+    }
+  }
+}
+
 
 /*LINK CAROUSEL*/
 .link-card{
