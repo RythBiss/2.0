@@ -90,6 +90,10 @@ button{
   grid-row-end: 4;
 }
 
+.expanded-menu > button{
+  margin: 0 8px;
+}
+
 /* MAIN */
 .fixed-ui{
   z-index: 1;

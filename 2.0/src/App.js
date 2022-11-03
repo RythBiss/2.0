@@ -14,6 +14,8 @@ function App() {
   return (
     <div className="App">
       <div className='fixed-ui'>
+        {/* connect the header buttons and page indicator in this file so the
+        nav buttons and indicator can be perfectly synced. */}
         <Header />
         <PageIndicator />
       </div>
