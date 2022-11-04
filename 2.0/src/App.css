@@ -3,6 +3,7 @@
     --accent-color-1: #3FA0FA;
     --accent-color-2: #EA57DB;
     --primary-color: #412381;
+    --primary-color-opac: #4123812a;
     --text-color: #FAFAFA
   }
 
@@ -29,15 +30,17 @@ button{
 
 /* HEADER */
 .header{
+  background-color: var(--primary-color-opac);
   color: var(--text-color);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem;
 }
 
 .header-title{
   font-weight: 700;
+  font-size: 1.5rem;
+  margin-left: 16px;
 }
 
 .menu-icon{
@@ -90,8 +93,38 @@ button{
   grid-row-end: 4;
 }
 
+.expanded-menu{
+  display: flex;
+}
+
 .expanded-menu > button{
-  margin: 0 8px;
+  font-size: 1.25rem;
+  height: 56px;
+  padding: 0 16px;
+}
+
+.opened-menu{
+  color: var(--text-color);
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding-top: 65px;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--primary-color-opac);
+  height: 100vh;
+  z-index: -1;
+  backdrop-filter: blur(10px);
+  width: 30%;
+}
+
+.opened-menu > button{
+  margin-bottom: 16px;
+  font-size: 2rem;
+  opacity: 100%;
+  text-decoration: none;
+  color: var(--text-color);
+  width: 100%;
 }
 
 /* MAIN */
@@ -156,26 +189,26 @@ img[class^='slot-']{
   min-height: 400px;
 }
 
-.bottom{
-  height: 100px;
-  display: flex;
+.contact{
+  width: 100%;
+  height: 20vh;
   flex-direction: column;
   justify-content: flex-start;
+  text-align: center;
+  font-size: 1.25rem;
 }
 
-.bottom-circle{
-  width: 800px;
+.contact-info{
+  flex-direction: column;
 }
 
 .icons{
-  position: absolute;
   display: flex;
   align-items: center;
-  height: 96%;
 }
 
 .icons > img{
-  margin: 16px;
+  margin: 8px;
   width: 32px;
 }
 
@@ -200,7 +233,7 @@ img[class^='slot-']{
   /* 0.28 */
   bottom: -100px;
   width: 50%;
-  max-width: 800px;
+  max-width: 720px;
 }
 
 .red-planet{
@@ -208,7 +241,7 @@ img[class^='slot-']{
   left: -125px;
   bottom: -250px;
   width: 50%;
-  max-width: 800px;
+  max-width: 720px;
 }
 
 .black-hole{
@@ -284,7 +317,7 @@ img[class^='slot-']{
   display: grid;
   margin: 64px;
   gap: 8px;
-  background-color: #4123812a;
+  background-color: var(--primary-color-opac);
   backdrop-filter: blur(10px);
 }
 

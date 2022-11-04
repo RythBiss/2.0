@@ -1,21 +1,21 @@
-<svg width="672" height="716" viewBox="0 0 672 716" fill="none" xmlns="http://www.w3.org/2000/svg">
-<circle r="226" transform="matrix(-1 0 0 1 226 286)" fill="#DA6F6F" fill-opacity="0.5"/>
-<circle r="226" transform="matrix(-1 0 0 1 363 490)" fill="#5F5A4A" fill-opacity="0.5"/>
-<circle r="226" transform="matrix(-1 0 0 1 446 226)" fill="#DAA96F" fill-opacity="0.5"/>
-<circle r="114" transform="matrix(-1 0 0 1 445 190)" fill="#FFFAD0"/>
-<circle r="143" transform="matrix(-1 0 0 1 446 190)" fill="#FFFAD0" fill-opacity="0.5"/>
-<circle r="170" transform="matrix(-1 0 0 1 446 190)" fill="#FFFAD0" fill-opacity="0.25"/>
-<mask id="mask0_21_595" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="127" y="168" width="410" height="410">
-<circle r="204.676" transform="matrix(-0.995034 0.099533 0.099533 0.995034 331.969 373.031)" fill="#D9D9D9"/>
+<svg width="678" height="706" viewBox="0 0 678 706" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle r="226" transform="matrix(-1 0 0 1 226 226)" fill="#DA6F6F" fill-opacity="0.5"/>
+<circle r="226" transform="matrix(-1 0 0 1 268 480)" fill="#5F5A4A" fill-opacity="0.5"/>
+<circle r="226" transform="matrix(-1 0 0 1 452 284)" fill="#DAA96F" fill-opacity="0.5"/>
+<circle r="114" transform="matrix(-1 0 0 1 410 170)" fill="#FFFAD0"/>
+<circle r="143" transform="matrix(-1 0 0 1 411 170)" fill="#FFFAD0" fill-opacity="0.5"/>
+<circle r="170" transform="matrix(-1 0 0 1 411 170)" fill="#FFFAD0" fill-opacity="0.25"/>
+<mask id="mask0_21_595" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="92" y="148" width="410" height="410">
+<circle r="204.676" transform="matrix(-0.995034 0.099533 0.099533 0.995034 296.969 353.031)" fill="#D9D9D9"/>
 </mask>
 <g mask="url(#mask0_21_595)">
-<rect width="409.351" height="81.8702" transform="matrix(-0.995034 0.099533 0.099533 0.995034 515.256 149)" fill="#3D2B26"/>
-<rect width="409.351" height="81.8702" transform="matrix(-0.995034 0.099533 0.099533 0.995034 523.405 230.464)" fill="#B04D31"/>
-<rect width="409.351" height="81.8702" transform="matrix(-0.995034 0.099533 0.099533 0.995034 531.554 311.927)" fill="#EE4D21"/>
-<rect width="409.351" height="81.8702" transform="matrix(-0.995034 0.099533 0.099533 0.995034 539.703 393.391)" fill="#B04D31"/>
-<rect width="409.351" height="81.8702" transform="matrix(-0.995034 0.099533 0.099533 0.995034 547.851 474.855)" fill="#3D2B26"/>
-<ellipse rx="64.8139" ry="36.1593" transform="matrix(-0.995034 0.099533 0.099533 0.995034 235.77 240.723)" fill="#3D2B26"/>
-<ellipse rx="64.8139" ry="36.1593" transform="matrix(-0.995034 0.099533 0.099533 0.995034 433.05 321.095)" fill="#B04D31"/>
-<ellipse rx="64.8139" ry="36.1593" transform="matrix(-0.995034 0.099533 0.099533 0.995034 228.58 443.025)" fill="#B04D31"/>
+<rect width="409.351" height="81.8702" transform="matrix(-0.995034 0.099533 0.099533 0.995034 480.256 129)" fill="#3D2B26"/>
+<rect width="409.351" height="81.8702" transform="matrix(-0.995034 0.099533 0.099533 0.995034 488.405 210.464)" fill="#B04D31"/>
+<rect width="409.351" height="81.8702" transform="matrix(-0.995034 0.099533 0.099533 0.995034 496.554 291.927)" fill="#EE4D21"/>
+<rect width="409.351" height="81.8702" transform="matrix(-0.995034 0.099533 0.099533 0.995034 504.703 373.391)" fill="#B04D31"/>
+<rect width="409.351" height="81.8702" transform="matrix(-0.995034 0.099533 0.099533 0.995034 512.851 454.855)" fill="#3D2B26"/>
+<ellipse rx="64.8139" ry="36.1593" transform="matrix(-0.995034 0.099533 0.099533 0.995034 200.77 220.723)" fill="#3D2B26"/>
+<ellipse rx="64.8139" ry="36.1593" transform="matrix(-0.995034 0.099533 0.099533 0.995034 398.05 301.095)" fill="#B04D31"/>
+<ellipse rx="64.8139" ry="36.1593" transform="matrix(-0.995034 0.099533 0.099533 0.995034 193.58 423.025)" fill="#B04D31"/>
 </g>
 </svg>
