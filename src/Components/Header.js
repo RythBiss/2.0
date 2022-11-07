@@ -10,10 +10,9 @@ export default function Header() {
       document.documentElement.clientHeight, document.documentElement.scrollHeight, document.documentElement.offsetHeight )) - window.innerHeight;
       window.scrollTo({top: (percent * limit), behavior: 'smooth'});
   }
-  const menuRef = useRef(null);
 
   const toggleMenu = () => {
-    if(menuRef.current){
+    if(collapseMenu == true){
       setOpenMenu(!openMenu);
     }
   }
@@ -29,7 +28,7 @@ export default function Header() {
   }
 
   const scrollToCarousel = () => {
-    scrollToPercent(0.75);
+    scrollToPercent(0.9);
     toggleMenu();
   }
 
@@ -76,7 +75,7 @@ const menuButtonVarients={
         <button onClick={toggleMenu} className='menu-icon'>{menuSVG}</button>
         <AnimatePresence>
         {openMenu &&
-            <motion.div ref={menuRef} className='opened-menu'
+            <motion.div className='opened-menu'
               initial={{ x:  '100%'}}
               animate={{ x: '0' }}
               exit={{ x: '100%' }}

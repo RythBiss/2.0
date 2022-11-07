@@ -1,15 +1,14 @@
 import './App.css';
 import Header from './Components/Header';
-import LinkCard from './Components/LinkCard';
 import PageIndicator from './Components/PageIndicator';
 import BluePlanet from './Art/BluePlanet.svg'
 import RedPlanet from './Art/RedPlanet.svg'
 import BlackHole from './Art/BlackHole.svg'
-import Bottom from './Art/Bottom.svg'
 import Git from './Art/Git.png'
 import Email from './Art/Gmail.png'
 import React, { useEffect, useState } from 'react'
 import { motion, useCycle } from 'framer-motion';
+import LinkCarousel from './Components/LinkCarousel';
 
 
 function App() {
@@ -64,8 +63,6 @@ function App() {
         initial={'hidden'}
         animate={'show'}
       >
-        {/* connect the header buttons and page indicator in this file so the
-        nav buttons and indicator can be perfectly synced. */}
         <Header />
         <PageIndicator setAnimateRed={setAnimateRed} setAnimatedBlack={setAnimatedBlack} setAnimatedContact={setAnimatedContact}/>
       </motion.div>
@@ -104,13 +101,15 @@ function App() {
             transition={{type: 'spring', stiffness: 500, damping: 100, delay: 0.5}}/>
 
         </div>
-        <div id='3' className='section carousel'>
-          <LinkCard beginAnimate={animatedBlack} />
+        <div id='3' className='section carousel-section'>
+          {/* <LinkCard beginAnimate={animatedBlack} /> */}
 
           <motion.img className='black-hole' src={BlackHole} alt='black hole'
             variants={BlackHoleVarients}
             animate={'show'}
             transition={{type: 'spring', stiffness: 500, damping: 100, delay: 1}}/>
+          
+          <LinkCarousel beginAnimate={animatedBlack}/>
         </div>
 
         <div id='4' className='section contact'>

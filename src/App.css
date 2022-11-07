@@ -30,11 +30,13 @@ button{
 
 /* HEADER */
 .header{
-  background-color: var(--primary-color-opac);
   color: var(--text-color);
   display: flex;
   justify-content: space-between;
   align-items: center;
+  min-height: 56px;
+  pointer-events: all;
+  backdrop-filter: blur(18px);
 }
 
 .header-title{
@@ -45,6 +47,7 @@ button{
 
 .menu-icon{
   background-color: transparent;
+  margin-right: 16px;
 }
 
 .menu-SVG{
@@ -56,12 +59,14 @@ button{
   display: grid;
   grid-template-columns: auto;
   gap: 8px;
+  pointer-events: none;
 }
 
 .scroll-indicator > *{
   width: 24px;
   grid-column-start: 1;
   grid-column-end: 1;
+  pointer-events: none;
   }
 
 .scroll-indicator > img{
@@ -111,11 +116,11 @@ button{
   padding-top: 65px;
   display: flex;
   flex-direction: column;
-  background-color: var(--primary-color-opac);
+  background-color: var(--primary-color);
   height: 100vh;
   z-index: -1;
-  backdrop-filter: blur(10px);
   width: 30%;
+  min-width: 150px;
 }
 
 .opened-menu > button{
@@ -136,6 +141,7 @@ button{
   height: 100vh;
   grid-template-columns: min-content auto;
   grid-template-rows: min-content 1fr min-content 1fr;
+  pointer-events: none;
 }
 
 img[class^='slot-']{
@@ -184,7 +190,7 @@ img[class^='slot-']{
   justify-content: flex-end;
 }
 
-.carousel{
+.carousel-section{
   height: 100vh;
   min-height: 400px;
 }
@@ -223,6 +229,88 @@ img[class^='slot-']{
   font-size: 1.5rem;
   margin-right: 64px;
   text-align: end;
+}
+
+/*LINK CAROUSEL*/
+.link-card{
+  display: grid;
+  margin: 64px 0;
+  gap: 8px;
+  background-color: var(--primary-color-opac);
+  backdrop-filter: blur(10px);
+  max-width: 500px;
+}
+
+.blue-corner{
+  width: 100px;
+  height: 100px;
+  border-top: 2px solid var(--accent-color-1);
+  border-left: 2px solid var(--accent-color-1);
+  grid-column-start: 1;
+  grid-column-end: 1;
+  grid-row-start: 1;
+  grid-row-end: 1;
+}
+
+.pink-corner{
+  width: 100px;
+  height: 100px;
+  border-bottom: 2px solid var(--accent-color-2);
+  border-right: 2px solid var(--accent-color-2);
+  grid-column-start: 3;
+  grid-column-end: 4;
+  grid-row-start: 3;
+  grid-row-end: 4;
+}
+
+.card-content{
+  margin: 32px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row-start: 1;
+  grid-row-end: 4;
+  width: 100%;
+}
+
+.link-title{
+  font-style: italic;
+}
+
+.link-text{
+  text-align: center;
+  width: 90%;
+}
+
+.link-tools{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 60%;
+}
+
+.link-tools > div{
+  border: 1px solid var(--accent-color-1);
+  width: fit-content;
+  border-radius: 1rem;
+  margin: 4px;
+  padding: 0 0.5rem;
+}
+
+.carousel{
+  display: flex;
+  justify-content: space-between;
+  padding: 0 32px 0 32px;
+}
+
+.link-button{
+  margin-top: 24px;
+  background-color: var(--accent-color-2);
+  width: 6rem;
+  border-radius: 0.5rem;
 }
 
 /*ART*/
@@ -309,81 +397,4 @@ img[class^='slot-']{
       width: 100%;
     }
   }
-}
-
-
-/*LINK CAROUSEL*/
-.link-card{
-  display: grid;
-  margin: 64px;
-  gap: 8px;
-  background-color: var(--primary-color-opac);
-  backdrop-filter: blur(10px);
-}
-
-.blue-corner{
-  width: 100px;
-  height: 100px;
-  border-top: 2px solid var(--accent-color-1);
-  border-left: 2px solid var(--accent-color-1);
-  grid-column-start: 1;
-  grid-column-end: 1;
-  grid-row-start: 1;
-  grid-row-end: 1;
-}
-
-.pink-corner{
-  width: 100px;
-  height: 100px;
-  border-bottom: 2px solid var(--accent-color-2);
-  border-right: 2px solid var(--accent-color-2);
-  grid-column-start: 3;
-  grid-column-end: 4;
-  grid-row-start: 3;
-  grid-row-end: 4;
-}
-
-.card-content{
-  margin: 32px 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  grid-column-start: 1;
-  grid-column-end: 4;
-  grid-row-start: 1;
-  grid-row-end: 4;
-  height: fit-content;
-  width: fit-content;
-}
-
-.link-title{
-  font-style: italic;
-}
-
-.link-text{
-  text-align: center;
-  width: 75%;
-}
-
-.link-tools{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  width: 75%;
-}
-
-.link-tools > div{
-  border: 1px solid var(--accent-color-1);
-  width: fit-content;
-  border-radius: 1rem;
-  margin: 4px;
-  padding: 0 0.5rem;
-}
-
-.link-button{
-  margin-top: 24px;
-  background-color: var(--accent-color-2);
-  width: 25%;
-  border-radius: 0.5rem;
 }

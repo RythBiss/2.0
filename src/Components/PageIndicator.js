@@ -12,7 +12,6 @@ export default function PageIndicator(props) {
       let limit = (Math.max( document.body.scrollHeight, document.body.offsetHeight, 
         document.documentElement.clientHeight, document.documentElement.scrollHeight, document.documentElement.offsetHeight )) - window.innerHeight;
       let perc = scroll/limit;
-      console.log(perc)
 
       if(perc < 0.15){
         setDotPosition(1);
