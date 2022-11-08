@@ -3,6 +3,10 @@ import { motion } from 'framer-motion';
 
 
 export default function LinkCard(props) {
+ 
+  const openLink = () => {
+    window.open(props.cardData.link, '_blank')
+  }
 
   return (
       <motion.div className='link-card'
@@ -10,8 +14,7 @@ export default function LinkCard(props) {
         initial='enter'
         animate='show'
         exit='exit'
-        transition={{duration: 0.2}}
-      >
+        transition={{duration: 0.2}}>
           <div className='blue-corner'></div>
           <div className='pink-corner'></div>
           <div className='card-content'>
@@ -22,7 +25,7 @@ export default function LinkCard(props) {
                 <div key={i}>{skill}</div>
               ))}
               </div>
-              <button className='link-button'>Link</button>
+              <button className='link-button' onClick={openLink}>Link</button>
           </div>
       </motion.div>
   )

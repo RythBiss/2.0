@@ -61,8 +61,15 @@ const headerVarients = {
 }
 
 const menuButtonVarients={
-  hover: {backgroundColor: '#41238181', scale: 1.1},
-  tap: {backgroundColor: '#412381c9', scale: 1}
+  hover: {x: '-8px', y: '-4px', backgroundColor: '#572eaf'},
+  tap: {y: 0, backgroundColor: '#7754c2',
+    transition: {duration: 0.1}}
+}
+
+const headerButtonVarients={
+  hover: {y: '4px', backgroundColor: '#572eaf'},
+  tap: {y: 0, backgroundColor: '#7754c2',
+    transition: {duration: 0.1}}
 }
 
   return (
@@ -85,24 +92,28 @@ const menuButtonVarients={
                 variants={menuButtonVarients}
                 whileHover={'hover'}
                 whileTap={'tap'}
+                whileFocus={'tap'}
               >Home</motion.button>
 
               <motion.button onClick={scrollToIntroduction}
                 variants={menuButtonVarients}
                 whileHover={'hover'}
                 whileTap={'tap'}
+                whileFocus={'tap'}
               >About</motion.button>
 
               <motion.button onClick={scrollToCarousel}
                 variants={menuButtonVarients}
                 whileHover={'hover'}
                 whileTap={'tap'}
+                whileFocus={'tap'}
               >Projects</motion.button>
 
               <motion.button onClick={scrollToContact}
                 variants={menuButtonVarients}
                 whileHover={'hover'}
                 whileTap={'tap'}
+                whileFocus={'tap'}
               >Contact</motion.button>
 
             </motion.div>
@@ -111,27 +122,26 @@ const menuButtonVarients={
       </>
       :
         <div className='expanded-menu'>
-          
           <motion.button onClick={scrollToTop}
-                variants={menuButtonVarients}
+                variants={headerButtonVarients}
                 whileHover={'hover'}
                 whileTap={'tap'}
               >Home</motion.button>
 
               <motion.button onClick={scrollToIntroduction}
-                variants={menuButtonVarients}
+                variants={headerButtonVarients}
                 whileHover={'hover'}
                 whileTap={'tap'}
               >About</motion.button>
 
               <motion.button onClick={scrollToCarousel}
-                variants={menuButtonVarients}
+                variants={headerButtonVarients}
                 whileHover={'hover'}
                 whileTap={'tap'}
               >Projects</motion.button>
 
               <motion.button onClick={scrollToContact}
-                variants={menuButtonVarients}
+                variants={headerButtonVarients}
                 whileHover={'hover'}
                 whileTap={'tap'}
               >Contact</motion.button>

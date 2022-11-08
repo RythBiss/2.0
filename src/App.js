@@ -13,7 +13,7 @@ import LinkCarousel from './Components/LinkCarousel';
 
 function App() {
 
-  const [colorValue, cycleColor] = useCycle('#FAFAFA', '#3FA0FA', '#EA57DB');
+  const [colorValue, cycleColor] = useCycle('#3FA0FA', '#EA57DB');
   const [animateRed, setAnimateRed] = useState(false);
   const [animatedBlack, setAnimatedBlack] = useState(false);
   const [animatedContact, setAnimatedContact] = useState(false);
@@ -57,25 +57,26 @@ function App() {
 
   return (
     <div className="App">
-
       <motion.div className='fixed-ui'
         variants={uiVarients}
         initial={'hidden'}
-        animate={'show'}
-      >
+        animate={'show'}>
+
         <Header />
-        <PageIndicator setAnimateRed={setAnimateRed} setAnimatedBlack={setAnimatedBlack} setAnimatedContact={setAnimatedContact}/>
+        <PageIndicator
+          setAnimateRed={setAnimateRed}
+          setAnimatedBlack={setAnimatedBlack}
+          setAnimatedContact={setAnimatedContact}/>
+
       </motion.div>
 
       <div className='main'>
         <div id='1' className='section top'>
-
           <motion.p className='first-text'
             initial={{ opacity: 0, x:'-5rem' }}
             animate={{ opacity: 1, x: 0 }}
             transition={{delay: 1}}
             viewport={{ once: true }}>
-
             Add some multi <motion.span animate={{color: colorValue}} transition={{duration: textColorSpeed / 1000}}>line</motion.span> splash text here.
           </motion.p>
 

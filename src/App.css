@@ -3,6 +3,8 @@
     --accent-color-1: #3FA0FA;
     --accent-color-2: #EA57DB;
     --primary-color: #412381;
+    --primary-color-hover: #572eaf;
+    --primary-color-active: #7754c2;
     --primary-color-opac: #4123812a;
     --text-color: #FAFAFA
   }
@@ -129,6 +131,7 @@ button{
   opacity: 100%;
   text-decoration: none;
   color: var(--text-color);
+  background-color: var(--primary-color);
   width: 100%;
 }
 
@@ -232,13 +235,19 @@ img[class^='slot-']{
 }
 
 /*LINK CAROUSEL*/
+.link-card-container{
+  display: flex;
+  justify-content: center;
+  width: 50%;
+  min-width: 220px;
+}
+
 .link-card{
   display: grid;
-  margin: 64px 0;
   gap: 8px;
   background-color: var(--primary-color-opac);
-  backdrop-filter: blur(10px);
-  max-width: 500px;
+  backdrop-filter: blur(18px);
+  width: 100%;
 }
 
 .blue-corner{
@@ -302,8 +311,9 @@ img[class^='slot-']{
 
 .carousel{
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   padding: 0 32px 0 32px;
+  width: 100%;
 }
 
 .link-button{
