@@ -205,10 +205,15 @@ img[class^='slot-']{
   justify-content: flex-start;
   text-align: center;
   font-size: 1.25rem;
+  min-height: 100px;
 }
 
 .contact-info{
   flex-direction: column;
+}
+
+.contact-text{
+  font-size: 1rem;
 }
 
 .icons{

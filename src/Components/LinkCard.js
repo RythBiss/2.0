@@ -1,12 +1,9 @@
 import React from 'react'
 import { motion } from 'framer-motion';
+import { openLink } from '../Functions/Common';
 
 
 export default function LinkCard(props) {
- 
-  const openLink = () => {
-    window.open(props.cardData.link, '_blank')
-  }
 
   return (
       <motion.div className='link-card'
@@ -25,7 +22,7 @@ export default function LinkCard(props) {
                 <div key={i}>{skill}</div>
               ))}
               </div>
-              <button className='link-button' onClick={openLink}>Link</button>
+              <button className='link-button' onClick={() => openLink(props.cardData.link)}>Link</button>
           </div>
       </motion.div>
   )

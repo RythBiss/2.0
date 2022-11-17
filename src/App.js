@@ -9,6 +9,7 @@ import Email from './Art/Gmail.png'
 import React, { useEffect, useState } from 'react'
 import { motion, useCycle } from 'framer-motion';
 import LinkCarousel from './Components/LinkCarousel';
+import { openLink } from './Functions/Common';
 
 
 function App() {
@@ -19,6 +20,17 @@ function App() {
   const [animatedContact, setAnimatedContact] = useState(false);
   const textColorSpeed = 1500;
 
+
+  const homeText = 
+  <>
+    Add some multi <motion.span animate={{color: colorValue}} transition={{duration: textColorSpeed / 1000}}>line</motion.span> splash text here.
+  </>
+
+  const introText = 
+  <>
+    Paragraph of text describing myself, summarizing my <motion.span animate={{color: colorValue}} transition={{duration: textColorSpeed / 1000}}>experience</motion.span> and skills.
+  </>
+
   useEffect(() => {
     const colorInt = setInterval(cycleColor, textColorSpeed);
 
@@ -27,17 +39,23 @@ function App() {
   
   const BluePlanetVarients = {
     hidden: {rotate: 90, x: '100%'},
-    show: {rotate: 0, x: 0}
+    show: {rotate: 0, x: '0%',
+      transition: {type: 'tween', delay: 1.5, duration: 1, ease: 'easeOut'}
+    }
   }
 
   const RedPlanetVarients = {
     hidden: {rotate: 90, x: '-100%'},
-    show: animateRed ? {rotate: 0, x: 0}  : {rotate: 90, x: '-100%'}
+    show: animateRed ? {rotate: 0, x: 0, 
+      transition: {type: 'tween', delay: 0.5, duration: 1, ease: 'easeOut'}
+    }  : {rotate: 90, x: '-100%'}
   }
 
   const BlackHoleVarients = {
     hidden: {rotate: 90, x: '-100%'},
-    show: animatedBlack ? {rotate: 0, x: 0}  : {rotate: 90, x: '100%'}
+    show: animatedBlack ? {rotate: 0, x: 0, 
+      transition: {type: 'tween', delay: 0.5, duration: 1, ease: 'easeOut'}
+    }  : {rotate: 90, x: '100%'}
   }
 
   const ContactVarients = {
@@ -77,14 +95,15 @@ function App() {
             animate={{ opacity: 1, x: 0 }}
             transition={{delay: 1}}
             viewport={{ once: true }}>
-            Add some multi <motion.span animate={{color: colorValue}} transition={{duration: textColorSpeed / 1000}}>line</motion.span> splash text here.
+              {homeText}
           </motion.p>
 
           <motion.img className='blue-planet' src={BluePlanet} alt='blue planet'
             variants={BluePlanetVarients}
             initial={'hidden'}
             animate={'show'}
-            transition={{type: 'spring', stiffness: 500, damping: 100, delay: 1.5}}/>
+            
+            />
 
         </div>
         <div id='2' className='section introduction'>
@@ -92,14 +111,13 @@ function App() {
           <motion.p className='second-text'
             animate={animateRed ? { opacity: 1, x: 0 } : { opacity: 0, x:'5rem' }}
             viewport={{ once: true }}>
-
-            Paragraph of text describing myself, summarizing my <motion.span animate={{color: colorValue}} transition={{duration: textColorSpeed / 1000}}>experience</motion.span> and skills.
+              {introText }
           </motion.p>
 
           <motion.img className='red-planet' src={RedPlanet} alt='red planet'
             variants={RedPlanetVarients}
             animate={'show'}
-            transition={{type: 'spring', stiffness: 500, damping: 100, delay: 0.5}}/>
+            />
 
         </div>
         <div id='3' className='section carousel-section'>
@@ -108,7 +126,7 @@ function App() {
           <motion.img className='black-hole' src={BlackHole} alt='black hole'
             variants={BlackHoleVarients}
             animate={'show'}
-            transition={{type: 'spring', stiffness: 500, damping: 100, delay: 1}}/>
+            />
           
           <LinkCarousel beginAnimate={animatedBlack}/>
         </div>
@@ -122,10 +140,9 @@ function App() {
 
             Get in touch
             <br/>
-            email@email.com
+            <span className='contact-text'>dkschaarschmidt@gmail.com</span>
             <div className='icons'>
-              <img src={Git} alt='github' />
-              <img src={Email} alt='email' />
+              <img src={Git} alt='github' onClick={() => openLink('https://github.com/RythBiss')}/>
             </div>
 
           </motion.div>
