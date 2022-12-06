@@ -20,15 +20,14 @@ function App() {
   const [animatedContact, setAnimatedContact] = useState(false);
   const textColorSpeed = 1500;
 
-
   const homeText = 
   <>
-    Add some multi <motion.span animate={{color: colorValue}} transition={{duration: textColorSpeed / 1000}}>line</motion.span> splash text here.
+    David Schaarschmidt, <motion.span animate={{color: colorValue}} transition={{duration: textColorSpeed / 1000}}>Frontend</motion.span> Developer.
   </>
 
   const introText = 
   <>
-    Paragraph of text describing myself, summarizing my <motion.span animate={{color: colorValue}} transition={{duration: textColorSpeed / 1000}}>experience</motion.span> and skills.
+    I'm currently looking for a full time position that will lead to a long term career. I excel in team settings and working alone. 
   </>
 
   useEffect(() => {
