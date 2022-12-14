@@ -193,6 +193,14 @@ img[class^='slot-']{
   justify-content: flex-end;
 }
 
+.introduction-sub{
+  font-size: 1.5rem;
+}
+
+.introduction-sub > span{
+  color: var(--accent-color-2);
+}
+
 .carousel-section{
   height: 100vh;
   min-height: 400px;

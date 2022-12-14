@@ -5,36 +5,30 @@ import BluePlanet from './Art/BluePlanet.svg'
 import RedPlanet from './Art/RedPlanet.svg'
 import BlackHole from './Art/BlackHole.svg'
 import Git from './Art/Git.png'
-import Email from './Art/Gmail.png'
-import React, { useEffect, useState } from 'react'
-import { motion, useCycle } from 'framer-motion';
+import React, { useState } from 'react'
+import { motion } from 'framer-motion';
 import LinkCarousel from './Components/LinkCarousel';
 import { openLink } from './Functions/Common';
 
 
 function App() {
 
-  const [colorValue, cycleColor] = useCycle('#3FA0FA', '#EA57DB');
   const [animateRed, setAnimateRed] = useState(false);
   const [animatedBlack, setAnimatedBlack] = useState(false);
   const [animatedContact, setAnimatedContact] = useState(false);
-  const textColorSpeed = 1500;
 
   const homeText = 
   <>
-    David Schaarschmidt, <motion.span animate={{color: colorValue}} transition={{duration: textColorSpeed / 1000}}>Frontend</motion.span> Developer.
+    David Schaarschmidt<br/> 
+    <div className='introduction-sub' >
+      <span>Frontend</span> developer.
+    </div>
   </>
 
   const introText = 
   <>
-    I'm currently looking for a full time position that will lead to a long term career. I excel in team settings and working alone. 
+    Building beautiful apps with an emphasis on clean and readable code.
   </>
-
-  useEffect(() => {
-    const colorInt = setInterval(cycleColor, textColorSpeed);
-
-    return () => clearInterval(colorInt);
-  }, [])
   
   const BluePlanetVarients = {
     hidden: {rotate: 90, x: '100%'},
@@ -143,6 +137,7 @@ function App() {
             <div className='icons'>
               <img src={Git} alt='github' onClick={() => openLink('https://github.com/RythBiss')}/>
             </div>
+            <a href=''>Resume</a>
 
           </motion.div>
         </div>
