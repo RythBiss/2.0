@@ -137,8 +137,6 @@ function App() {
             <div className='icons'>
               <img src={Git} alt='github' onClick={() => openLink('https://github.com/RythBiss')}/>
             </div>
-            <a href=''>Resume</a>
-
           </motion.div>
         </div>
       </div>
