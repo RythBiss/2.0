@@ -76,7 +76,7 @@ const headerButtonVarients={
     <motion.div className='header item-1'
       variants={headerVarients}
     >
-      <div className='header-title'>David <span style={{fontWeight: '300'}}>Schaarschmidt</span></div>
+      <div className='header-title'>David <span style={{fontWeight: '300'}}>S.</span></div>
       {collapseMenu === true ?
       <>
         <button onClick={toggleMenu} className='menu-icon'>{menuSVG}</button>

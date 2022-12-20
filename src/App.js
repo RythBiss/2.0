@@ -19,7 +19,7 @@ function App() {
 
   const homeText = 
   <>
-    David Schaarschmidt<br/> 
+    David S.<br/> 
     <div className='introduction-sub' >
       <span>Frontend</span> developer.
     </div>
@@ -27,7 +27,7 @@ function App() {
 
   const introText = 
   <>
-    Building beautiful apps with an emphasis on clean and readable code.
+    Building beautiful apps with an emphasis on clean and easily read code.
   </>
   
   const BluePlanetVarients = {
@@ -133,7 +133,7 @@ function App() {
 
             Get in touch
             <br/>
-            <span className='contact-text'>dkschaarschmidt@gmail.com</span>
+            <span className='contact-text'>emailredacted@gmail.com</span>
             <div className='icons'>
               <img src={Git} alt='github' onClick={() => openLink('https://github.com/RythBiss')}/>
             </div>
