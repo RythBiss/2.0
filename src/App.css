@@ -50,6 +50,7 @@ button{
 .menu-icon{
   background-color: transparent;
   margin-right: 16px;
+  cursor: pointer;
 }
 
 .menu-SVG{
@@ -108,6 +109,7 @@ button{
   font-size: 1.25rem;
   height: 56px;
   padding: 0 16px;
+  cursor: pointer;
 }
 
 .opened-menu{
@@ -133,6 +135,7 @@ button{
   color: var(--text-color);
   background-color: var(--primary-color);
   width: 100%;
+  cursor: pointer;
 }
 
 /* MAIN */
@@ -227,6 +230,7 @@ img[class^='slot-']{
 .icons{
   display: flex;
   align-items: center;
+  cursor: pointer;
 }
 
 .icons > img{
@@ -260,7 +264,6 @@ img[class^='slot-']{
   gap: 8px;
   background-color: var(--primary-color-opac);
   backdrop-filter: blur(18px);
-  width: 100%;
 }
 
 .blue-corner{
@@ -334,6 +337,7 @@ img[class^='slot-']{
   background-color: var(--accent-color-2);
   width: 6rem;
   border-radius: 0.5rem;
+  cursor: pointer;
 }
 
 /*ART*/
@@ -377,7 +381,13 @@ img[class^='slot-']{
   }
 }
 
+.title-text{
+  font-size: 4rem;
+}
+
 @media (max-width: 1024px) {
+
+
   .blue-planet{
     width: 80%;
     max-width: 500px;
@@ -395,6 +405,14 @@ img[class^='slot-']{
 }
 
 @media (max-width: 768px) {
+  .title-text{
+    font-size: 2.5rem;
+  }
+
+  .introduction-sub{
+    font-size: 1rem;
+  }
+
   .blue-planet{
     width: 60%;
   }
@@ -409,7 +427,7 @@ img[class^='slot-']{
 
   @media (orientation: portrait) {
     .blue-planet{
-      width: 100%;
+      width: 80%;
     }
     
     .red-planet{

@@ -18,12 +18,12 @@ function App() {
   const [animatedContact, setAnimatedContact] = useState(false);
 
   const homeText = 
-  <>
-    David S.<br/> 
+  <div className='title-text'>
+    David Schaarschmidt<br/> 
     <div className='introduction-sub' >
       <span>Frontend</span> developer.
     </div>
-  </>
+  </div>
 
   const introText = 
   <>
@@ -133,7 +133,7 @@ function App() {
 
             Get in touch
             <br/>
-            <span className='contact-text'>emailredacted@gmail.com</span>
+            <span className='contact-text'>dkschaarschmidt@gmail.com</span>
             <div className='icons'>
               <img src={Git} alt='github' onClick={() => openLink('https://github.com/RythBiss')}/>
             </div>
